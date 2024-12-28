@@ -2,16 +2,46 @@
 
 LatticeFold is a proof-of-concept implementation of the LatticeFold folding scheme engineered by [Nethermind](https://nethermind.io) based on the work 
 [LatticeFold: A Lattice-based Folding Scheme and its Applications to Succinct Proof Systems](https://eprint.iacr.org/2024/257) by Dan Boneh and Binyi Chen.
+## Table of Contents
 
-## Overview
-This implementation demonstrates the potential of lattice-based cryptography for succinct proof systems. Applications include privacy-preserving computations, zero-knowledge proofs, and verifiable computations.
+1. [Project Overview](#project-overview)
+2. [Building](#building)
+3. [Usage](#usage)
+4. [Examples](#examples)
+5. [Frontends](#frontends)
+6. [Contributing](#contributing)
+7. [License](#license)
+8. [Acknowledgments](#acknowledgments)
+---
+## Project Overview
+
+LatticeFold implements a lattice-based folding scheme for succinct proof systems. It combines advanced cryptographic techniques to reduce the complexity of proofs while maintaining security and efficiency. This implementation demonstrates the potential of lattice-based cryptography for succinct proof systems.
+
+### Applications
+- **Privacy-Preserving Computations**: Securely compute functions while protecting sensitive data.
+- **Zero-Knowledge Proofs**: Prove knowledge of a statement without revealing the statement itself.
+- **Verifiable Computations**: Allow a verifier to confirm the correctness of computations without re-executing them.
+
+The project is supported by the Ethereum Foundation ZK Grant and is intended for research and experimentation, not production use.
+
+### Key Features
+- **Ajtai Commitment Scheme**: Provides cryptographic commitments.
+- **R1CS/CCS Structures**: Facilitates succinct circuit representations.
+- **Fiat-Shamir Transcript**: Adds non-interactive proof capabilities.
+
+---
 
 **DISCLAIMER:** This is a proof-of-concept prototype, and in particular has not received careful code review. This implementation is provided "as is" and NOT ready for production use. Use at your own risk.
 
 ## Building
 ### Prerequisites
-- Rust and Cargo installed via `rustup`.
-- Pinned Rust version: `nightly-2024-11-05`.
+- [Install Rust](https://www.rust-lang.org/tools/install).
+- Ensure `rustup` is installed to manage toolchains.
+- Use `rustup` to install the nightly toolchain pinned to `nightly-2024-11-05`:
+  
+   ```bash
+   rustup install nightly-2024-11-05
+  ```
 - The [rust-toolchain](https://github.com/NethermindEth/latticefold/blob/main/rust-toolchain) file pins the version of the Rust toolchain, which the LatticeFold library builds with, to the specific version `nightly-2024-11-05`.
 ### Instructions
 - Clone the repository:
@@ -30,9 +60,10 @@ cargo build --release
 ```
 ## Troubleshooting
 - Verify the correct toolchain is set using `rustup show`.
+- Run `cargo update` to fetch the latest compatible dependencies.
 - For platform-specific issues, consult the Rust documentation.
 ## Usage
-Import the library:
+Import the library to your `Cargo.toml`:
 ```toml
 [dependencies]
 latticefold = { git = "https://github.com/NethermindEth/latticefold.git", package = "latticefold" }
@@ -44,11 +75,16 @@ Available packages:
 
 ## Examples
 
-Check [latticefold/examples/README.md](latticefold/examples/README.md) for examples.
+- Check [latticefold/examples/README.md](latticefold/examples/README.md) for examples.
+- Run an example using Cargo:
+```bash
+cargo run --example example_name
+```
+
 
 ## Frontends
 
-Currently, the only way to define a circuit to be folded is by specifying it as a [rank-1 constraint system (R1CS)](https://github.com/NethermindEth/latticefold/blob/main/latticefold/src/arith/r1cs.rs) or a [customizable constraint system (CCS)](https://github.com/NethermindEth/latticefold/blob/main/latticefold/src/arith.rs).
+Currently, the only way to define a circuit to be folded is by specifying it as a [rank-1 constraint system (R1CS)](https://github.com/NethermindEth/latticefold/blob/main/latticefold/src/arith/r1cs.rs) - a representation of arithmetic circuits using linear constraints or a [customizable constraint system (CCS)](https://github.com/NethermindEth/latticefold/blob/main/latticefold/src/arith.rs) - flexible circuit definitions tailored to specific use cases.
 
 ## License
 The crates in this repository are licensed under either of the following licenses, at your discretion.
