@@ -28,7 +28,6 @@ The project is supported by the Ethereum Foundation ZK Grant and is intended for
 - **Ajtai Commitment Scheme**: Provides cryptographic commitments.
 - **R1CS/CCS Structures**: Facilitates succinct circuit representations.
 - **Fiat-Shamir Transcript**: Adds non-interactive proof capabilities.
-
 ---
 
 **DISCLAIMER:** This is a proof-of-concept prototype, and in particular has not received careful code review. This implementation is provided "as is" and NOT ready for production use. Use at your own risk.
