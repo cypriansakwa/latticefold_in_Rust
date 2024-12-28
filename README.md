@@ -17,8 +17,8 @@ rustup install nightly-2024-11-05
 After that, use `cargo`, the standard Rust build tool, to build the library:
 
 ```bash
-git clone https://github.com/NethermindEth/latticefold.git
-cd latticefold
+git clone https://github.com/cypriansakwa/latticefold_in_Rust.git
+cd latticefold_in_Rust
 cargo build --release
 ```
 
