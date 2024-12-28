@@ -1,27 +1,36 @@
 # LatticeFold
 
-A proof-of-concept implementation of the LatticeFold folding scheme engineered by [Nethermind](https://nethermind.io) based on the work 
+LatticeFold is a proof-of-concept implementation of the LatticeFold folding scheme engineered by [Nethermind](https://nethermind.io) based on the work 
 [LatticeFold: A Lattice-based Folding Scheme and its Applications to Succinct Proof Systems](https://eprint.iacr.org/2024/257) by Dan Boneh and Binyi Chen.
+
+## Overview
+This implementation demonstrates the potential of lattice-based cryptography for succinct proof systems. Applications include privacy-preserving computations, zero-knowledge proofs, and verifiable computations.
 
 **DISCLAIMER:** This is a proof-of-concept prototype, and in particular has not received careful code review. This implementation is provided "as is" and NOT ready for production use. Use at your own risk.
 
 ## Building
-
-The [rust-toolchain](https://github.com/NethermindEth/latticefold/blob/main/rust-toolchain) file pins the version of the Rust toolchain, which the LatticeFold library builds with, to the specific version `nightly-2024-11-05`.
-
-One can install the `nightly-2024-11-05` toolchain by invoking:
+### Prerequisites
+- Rust and Cargo installed via `rustup`.
+- Pinned Rust version: `nightly-2024-11-05`.
+- The [rust-toolchain](https://github.com/NethermindEth/latticefold/blob/main/rust-toolchain) file pins the version of the Rust toolchain, which the LatticeFold library builds with, to the specific version `nightly-2024-11-05`.
+### Instructions
+- Clone the repository:
+```bash
+git clone https://github.com/NethermindEth/latticefold.git
+cd latticefold
+```
+- One can install the `nightly-2024-11-05` toolchain by invoking:
 ```bash
 rustup install nightly-2024-11-05
 ```
 
-After that, use `cargo`, the standard Rust build tool, to build the library:
-
+- After that, use `cargo`, the standard Rust build tool, to build the library:
 ```bash
-git clone https://github.com/cypriansakwa/latticefold_in_Rust.git
-cd latticefold_in_Rust
 cargo build --release
 ```
-
+## Troubleshooting
+- Verify the correct toolchain is set using `rustup show`.
+- For platform-specific issues, consult the Rust documentation.
 ## Usage
 Import the library:
 ```toml
