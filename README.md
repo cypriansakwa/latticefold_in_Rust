@@ -1,7 +1,6 @@
 # LatticeFold
+A proof-of-concept implementation of the LatticeFold folding scheme, engineered by [Nethermind](https://nethermind.io), based on the work [LatticeFold: A Lattice-based Folding Scheme and its Applications to Succinct Proof Systems](https://eprint.iacr.org/2024/257) by Dan Boneh and Binyi Chen.
 
-LatticeFold is a proof-of-concept implementation of the LatticeFold folding scheme engineered by [Nethermind](https://nethermind.io) based on the work 
-[LatticeFold: A Lattice-based Folding Scheme and its Applications to Succinct Proof Systems](https://eprint.iacr.org/2024/257) by Dan Boneh and Binyi Chen.
 ## Table of Contents
 
 1. [Project Overview](#project-overview)
@@ -18,7 +17,6 @@ LatticeFold is a proof-of-concept implementation of the LatticeFold folding sche
 LatticeFold implements a lattice-based folding scheme for succinct proof systems. It combines advanced cryptographic techniques to reduce the complexity of proofs while maintaining security and efficiency. This implementation demonstrates the potential of lattice-based cryptography for succinct proof systems.
 
 ### Applications
-- **Privacy-Preserving Computations**: Securely compute functions while protecting sensitive data.
 - **Zero-Knowledge Proofs**: Prove knowledge of a statement without revealing the statement itself.
 - **Verifiable Computations**: Allow a verifier to confirm the correctness of computations without re-executing them.
 
@@ -35,8 +33,7 @@ The project is supported by the Ethereum Foundation ZK Grant and is intended for
 
 ## Building
 ### Prerequisites
-- [Install Rust](https://www.rust-lang.org/tools/install).
-- Ensure `rustup` is installed to manage toolchains.
+- [Install Rust](https://www.rust-lang.org/tools/install) to manage toolchains.
 - Use `rustup` to install the nightly toolchain pinned to `nightly-2024-11-05`:
   
    ```bash
@@ -49,11 +46,6 @@ The project is supported by the Ethereum Foundation ZK Grant and is intended for
 git clone https://github.com/NethermindEth/latticefold.git
 cd latticefold
 ```
-- One can install the `nightly-2024-11-05` toolchain by invoking:
-```bash
-rustup install nightly-2024-11-05
-```
-
 - After that, use `cargo`, the standard Rust build tool, to build the library:
 ```bash
 cargo build --release
@@ -84,7 +76,7 @@ cargo run --example example_name
 
 ## Frontends
 
-Currently, the only way to define a circuit to be folded is by specifying it as a [rank-1 constraint system (R1CS)](https://github.com/NethermindEth/latticefold/blob/main/latticefold/src/arith/r1cs.rs) - a representation of arithmetic circuits using linear constraints or a [customizable constraint system (CCS)](https://github.com/NethermindEth/latticefold/blob/main/latticefold/src/arith.rs) - flexible circuit definitions tailored to specific use cases.
+Currently, the only way to define a circuit to be folded is by specifying it as a [rank-1 constraint system (R1CS)](https://github.com/NethermindEth/latticefold/blob/main/latticefold/src/arith/r1cs.rs) - a representation of arithmetic circuits using degree-2 constraints or a [customizable constraint system (CCS)](https://github.com/NethermindEth/latticefold/blob/main/latticefold/src/arith.rs) - flexible circuit definitions that can handle constraints of any degree.
 
 ## License
 The crates in this repository are licensed under either of the following licenses, at your discretion.
