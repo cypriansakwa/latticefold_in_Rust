@@ -16,7 +16,6 @@ A proof-of-concept implementation of the LatticeFold folding scheme, engineered 
 
 LatticeFold implements a lattice-based folding scheme for succinct proof systems. It combines advanced cryptographic techniques to reduce the complexity of proofs while maintaining security and efficiency. This implementation demonstrates the potential of lattice-based cryptography for succinct proof systems.
 ### Applications
-
 - **Recursive SNARKs**: Enables efficient recursive succinct non-interactive arguments of knowledge (SNARKs), essential for scaling blockchains and verifying large computations.  
 - **Proof-Carrying Data (PCD)**: Facilitates the construction of PCD schemes, verifying sequences of computations to ensure correctness at each step.  
 - **Post-Quantum Security**: Built on the Module Short Integer Solution (MSIS) problem, providing security against quantum attacks, making it ideal for post-quantum applications.  
