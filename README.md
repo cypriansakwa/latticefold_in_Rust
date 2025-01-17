@@ -15,10 +15,17 @@ A proof-of-concept implementation of the LatticeFold folding scheme, engineered 
 ## Project Overview
 
 LatticeFold implements a lattice-based folding scheme for succinct proof systems. It combines advanced cryptographic techniques to reduce the complexity of proofs while maintaining security and efficiency. This implementation demonstrates the potential of lattice-based cryptography for succinct proof systems.
-
 ### Applications
-- **Zero-Knowledge Proofs**: Prove knowledge of a statement without revealing the statement itself.
-- **Verifiable Computations**: Allow a verifier to confirm the correctness of computations without re-executing them.
+
+- **Recursive SNARKs**: Enables efficient recursive succinct non-interactive arguments of knowledge (SNARKs), essential for scaling blockchains and verifying large computations.  
+- **Proof-Carrying Data (PCD)**: Facilitates the construction of PCD schemes, verifying sequences of computations to ensure correctness at each step.  
+- **Post-Quantum Security**: Built on the Module Short Integer Solution (MSIS) problem, providing security against quantum attacks, making it ideal for post-quantum applications.  
+- **Zero-Knowledge Proofs**: Constructs proofs that allow demonstrating knowledge of a statement without revealing the statement itself, crucial for privacy-preserving applications.  
+- **Verifiable Computations**: Verifies computational correctness without re-executing the computations, ensuring computational integrity.  
+- **Customizable Constraint Systems (CCS)**: Supports both low-degree (e.g., R1CS) and high-degree constraints, offering flexibility in computational proofs.  
+- **Fully Homomorphic Encryption (FHE) and Lattice Signatures**: Operates on the same module structure as FHE and lattice-based signatures, benefiting from optimizations and hardware advancements in these areas.  
+
+
 
 The project is supported by the Ethereum Foundation ZK Grant and is intended for research and experimentation, not production use.
 
