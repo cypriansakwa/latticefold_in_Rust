@@ -26,7 +26,6 @@ LatticeFold implements a lattice-based folding scheme for succinct proof systems
 - **Fully Homomorphic Encryption (FHE) and Lattice Signatures**: Operates on the same module structure as FHE and lattice-based signatures, benefiting from optimizations and hardware advancements in these areas.  
 
 
-
 The project is supported by the Ethereum Foundation ZK Grant and is intended for research and experimentation, not production use.
 
 ### Key Features
