@@ -1,17 +1,6 @@
 # LatticeFold
 A proof-of-concept implementation of the LatticeFold folding scheme, engineered by [Nethermind](https://nethermind.io), based on the work [LatticeFold: A Lattice-based Folding Scheme and its Applications to Succinct Proof Systems](https://eprint.iacr.org/2024/257) by Dan Boneh and Binyi Chen.
 
-## Table of Contents
-
-1. [Project Overview](#project-overview)
-2. [Building](#building)
-3. [Usage](#usage)
-4. [Examples](#examples)
-5. [Frontends](#frontends)
-6. [Contributing](#contributing)
-7. [License](#license)
-8. [Acknowledgments](#acknowledgments)
----
 ## Project Overview
 
 LatticeFold implements a lattice-based folding scheme for succinct proof systems. It combines advanced cryptographic techniques to reduce the complexity of proofs while maintaining security and efficiency. This implementation demonstrates the potential of lattice-based cryptography for succinct proof systems.
